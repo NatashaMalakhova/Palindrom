@@ -6,7 +6,36 @@ body {
 .pal{
   margin: 40px 300px;
 }
+/* начало меню */
+.top-menu {
+  position: relative;
+  background: rgba(34,34,34,.5);
+}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.left-item {float: left;}
 
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  line-height: 80px;
+  padding: 0 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+  transition: .3s linear;
+}
+.menu-main a:hover {background: rgba(1, 2, 46, 0.7);}
+
+/* закончилось меню */
 .add-form {
   display: flex;
 }
