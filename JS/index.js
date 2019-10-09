@@ -7,6 +7,8 @@ const isPalindrome = (str) => {
   if (str === undefined) throw new Error ('The string is not defined.');
     
   str = String(str).toLowerCase().replace(/[/.,!?@;_’%:\s/\-/\–/\—/]*/g, '');
+  if (str.length === 0) throw new Error ('No data.'); // показать эту ошибку пользователю
+  if (str.length === 1) return true;
 
   const result = (str) => {
     let firstIndex = str[0];
@@ -25,9 +27,9 @@ newItemForm.addEventListener('submit', (evt) => {
   isPalindrome(taskText);
 
   if (isPalindrome(taskText) === true) {
-    document.getElementById('answer').innerHTML = 'Yes, it is a palindrome.';
+    document.getElementById('answer').innerHTML = 'Да, это палиндром.';
   } else {
-    document.getElementById('answer').innerHTML = 'No, it is not a palindrome.';
+    document.getElementById('answer').innerHTML = 'Нет, это не палиндром.';
   }
 });
 
